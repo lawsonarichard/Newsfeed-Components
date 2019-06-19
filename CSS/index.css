@@ -3,27 +3,27 @@
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 400;
-  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v19/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
 }
 /* Below this line is where you will start your work */
 /* It is important to note, you will not be writing any CSS in this file*/
 .header {
   width: 100%;
   height: 75px;
-  background-color: #388E3C;
-  color: white;
+  background-color: #14121F;
+  color: #BA112E;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +34,107 @@
 .header h1 {
   margin: 0;
   font-size: 48px;
+}
+.menu-button {
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+  color: #BA112E;
+}
+.menu {
+  color: #BA112E;
+  display: none;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 350px;
+  height: 100vh;
+  /* This give the height 100% of the screen or, '100% of View Height' */
+  background-color: #14121F;
+  border: 1px solid #2F2C4B;
+  border-left: none;
+  border-bottom: none;
+  z-index: 2;
+  /* This set the layer level of the element, it has precendence over initial level of 1*/
+}
+.menu ul li {
+  list-style-type: none;
+  font-size: 32px;
+  padding: 30px 0;
+  text-align: center;
+}
+.menu--open {
+  display: block;
+}
+.articles {
+  margin-top: 95px;
+  padding: 0px 95px 0px 95px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.article {
+  margin: 20px;
+  /* padding: 0 20px 25px; */
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  height: 470px;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px lightgrey;
+  width: 30%;
+  background-color: #2F2C4B;
+}
+.article img {
+  max-width: 100%;
+  max-height: 435px;
+  overflow: hidden;
+  margin: 0 0 auto;
+}
+.article p {
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+.article h2 {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 0px;
+  color: white;
+  margin-bottom: 0px;
+  position: absolute;
+  top: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.article .date {
+  margin: 0;
+  font-size: 14px;
+  padding: 10px;
+  position: absolute;
+  text-shadow: 3px 1px 12px #2F2C4B;
+  font-weight: bold;
+}
+.article .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.article .expandButton {
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+  background-image: linear-gradient(to bottom, transparent, black);
+}
+.article-open {
+  height: auto;
 }
 html,
 body {
